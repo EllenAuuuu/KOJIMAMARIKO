@@ -1,0 +1,47 @@
+body {
+  background-color: rgb(240, 240, 240);
+}
+
+.my-2em {
+  margin: 2em 0;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.custom-options {
+  margin-bottom: 1rem;
+}
+
+/* FOOTER STYLE */
+#footer {
+  text-align: center;
+}
+
+#copyright {
+  text-align: center;
+}
+
+footer a {
+  color: #707070;
+  text-decoration: none;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0px;
+  float: left;
+  margin-right: 50px;
+}
+
+footer li {
+  margin-bottom: 10px;
+}
+
+footer li a {
+  color: #707070;
+  text-decoration: none;
+}

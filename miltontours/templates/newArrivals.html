@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% block main %}
+<div class="album py-5 bg-light">
+  <div class="container">
+    <h2>New Arrivals!!</h2>
+    <div class="row">
+      {% for product in products %}
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img
+            src="{{url_for('static', filename='img/'+product.image)}}"
+            class="card-img-top"
+            alt="..."
+          />
+
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <p class="card-text m-0">{{ product.name }}</p>
+              <h6 class="m-0">Price:{{ product.price }} NTD</h6>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a
+                  class="btn btn-sm btn-outline-secondary"
+                  href="/product/{{ product.id }}/details"
+                  >View Details</a
+                >
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline-secondary"
+                  href="#"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
